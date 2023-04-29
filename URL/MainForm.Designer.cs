@@ -34,12 +34,12 @@ namespace URL
             this.mainLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.protokolLabel = new System.Windows.Forms.Label();
-            this.protokolText = new System.Windows.Forms.Label();
+            this.protocolText = new System.Windows.Forms.Label();
             this.hostText = new System.Windows.Forms.Label();
             this.hostLabel = new System.Windows.Forms.Label();
             this.portText = new System.Windows.Forms.Label();
             this.portLabel = new System.Windows.Forms.Label();
-            this.pytText = new System.Windows.Forms.Label();
+            this.pathText = new System.Windows.Forms.Label();
             this.pytLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,7 @@ namespace URL
             this.urlButton.TabIndex = 1;
             this.urlButton.Text = "Разделить";
             this.urlButton.UseVisualStyleBackColor = false;
+            this.urlButton.Click += new System.EventHandler(this.urlButton_Click);
             // 
             // mainLabel
             // 
@@ -86,6 +87,7 @@ namespace URL
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // protokolLabel
             // 
@@ -98,16 +100,15 @@ namespace URL
             this.protokolLabel.TabIndex = 4;
             this.protokolLabel.Text = "Протокол:";
             // 
-            // protokolText
+            // protocolText
             // 
-            this.protokolText.AutoSize = true;
-            this.protokolText.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.protokolText.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.protokolText.Location = new System.Drawing.Point(162, 270);
-            this.protokolText.Name = "protokolText";
-            this.protokolText.Size = new System.Drawing.Size(63, 25);
-            this.protokolText.TabIndex = 5;
-            this.protokolText.Text = "https";
+            this.protocolText.AutoSize = true;
+            this.protocolText.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.protocolText.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.protocolText.Location = new System.Drawing.Point(162, 270);
+            this.protocolText.Name = "protocolText";
+            this.protocolText.Size = new System.Drawing.Size(0, 25);
+            this.protocolText.TabIndex = 5;
             // 
             // hostText
             // 
@@ -116,9 +117,8 @@ namespace URL
             this.hostText.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.hostText.Location = new System.Drawing.Point(106, 312);
             this.hostText.Name = "hostText";
-            this.hostText.Size = new System.Drawing.Size(141, 25);
+            this.hostText.Size = new System.Drawing.Size(0, 25);
             this.hostText.TabIndex = 7;
-            this.hostText.Text = "youtube.com";
             // 
             // hostLabel
             // 
@@ -138,9 +138,8 @@ namespace URL
             this.portText.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.portText.Location = new System.Drawing.Point(106, 352);
             this.portText.Name = "portText";
-            this.portText.Size = new System.Drawing.Size(36, 25);
+            this.portText.Size = new System.Drawing.Size(0, 25);
             this.portText.TabIndex = 9;
-            this.portText.Text = "80";
             // 
             // portLabel
             // 
@@ -153,16 +152,15 @@ namespace URL
             this.portLabel.TabIndex = 8;
             this.portLabel.Text = "Порт:";
             // 
-            // pytText
+            // pathText
             // 
-            this.pytText.AutoSize = true;
-            this.pytText.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pytText.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pytText.Location = new System.Drawing.Point(162, 392);
-            this.pytText.Name = "pytText";
-            this.pytText.Size = new System.Drawing.Size(55, 25);
-            this.pytText.TabIndex = 11;
-            this.pytText.Text = "feed";
+            this.pathText.AutoSize = true;
+            this.pathText.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pathText.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pathText.Location = new System.Drawing.Point(162, 392);
+            this.pathText.Name = "pathText";
+            this.pathText.Size = new System.Drawing.Size(0, 25);
+            this.pathText.TabIndex = 11;
             // 
             // pytLabel
             // 
@@ -175,25 +173,25 @@ namespace URL
             this.pytLabel.TabIndex = 10;
             this.pytLabel.Text = "URL-путь:";
             // 
-            // mainForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::URL.Properties.Resources.fon;
             this.ClientSize = new System.Drawing.Size(704, 450);
-            this.Controls.Add(this.pytText);
+            this.Controls.Add(this.pathText);
             this.Controls.Add(this.pytLabel);
             this.Controls.Add(this.portText);
             this.Controls.Add(this.portLabel);
             this.Controls.Add(this.hostText);
             this.Controls.Add(this.hostLabel);
-            this.Controls.Add(this.protokolText);
+            this.Controls.Add(this.protocolText);
             this.Controls.Add(this.protokolLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mainLabel);
             this.Controls.Add(this.urlButton);
             this.Controls.Add(this.urlField);
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.Text = "mainForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -208,12 +206,12 @@ namespace URL
         private System.Windows.Forms.Label mainLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label protokolLabel;
-        private System.Windows.Forms.Label protokolText;
+        private System.Windows.Forms.Label protocolText;
         private System.Windows.Forms.Label hostText;
         private System.Windows.Forms.Label hostLabel;
         private System.Windows.Forms.Label portText;
         private System.Windows.Forms.Label portLabel;
-        private System.Windows.Forms.Label pytText;
+        private System.Windows.Forms.Label pathText;
         private System.Windows.Forms.Label pytLabel;
     }
 }

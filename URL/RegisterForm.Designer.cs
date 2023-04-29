@@ -51,6 +51,7 @@
             this.backButton.TabIndex = 32;
             this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // registerButton
             // 
@@ -65,6 +66,7 @@
             this.registerButton.TabIndex = 31;
             this.registerButton.Text = "Зарегистрироваться";
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // secondPasswordTextBox
             // 
@@ -128,7 +130,7 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Логин:";
             // 
-            // registerForm
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +144,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "registerForm";
+            this.Name = "RegisterForm";
             this.Text = "registerForm";
             this.ResumeLayout(false);
             this.PerformLayout();
